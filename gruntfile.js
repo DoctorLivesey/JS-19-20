@@ -17,26 +17,26 @@ module.exports = function(grunt) {
         }
       }
     },
-    cssmin: {
-      dist: {
-        src: ['css/src/*.scss'],
-        dest: 'css/dist/style.main.scss'
-      }
-    },
     sass: {
       dist: {
         options: {
           style: 'compressed'
         },
         files: {
-          'css/dist/style.main.css': 'css/dist/style.main.scss'
+          'css/src/style.css': 'css/src/style.scss'
         }
+      }
+    },
+    cssmin: {
+      dist: {
+        src: ['css/src/*.css'],
+        dest: 'css/dist/style.main.css'
       }
     },
     watch: {
       sass: {
         files: ['css/src/*.scss'],
-        tasks: ['cssmin','sass'],
+        tasks: ['sass','cssmin'],
       }
     } 
   });

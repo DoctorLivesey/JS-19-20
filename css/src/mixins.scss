@@ -1,0 +1,6 @@
+@mixin position($x, $y){
+	background-position: $x $y;
+}
+@mixin color($x){
+	background-color: $x;
+}
